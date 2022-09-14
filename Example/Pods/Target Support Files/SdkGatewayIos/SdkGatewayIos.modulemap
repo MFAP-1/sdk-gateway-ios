@@ -1,0 +1,6 @@
+framework module SdkGatewayIos {
+  umbrella header "SdkGatewayIos-umbrella.h"
+
+  export *
+  module * { export * }
+}

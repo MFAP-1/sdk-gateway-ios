@@ -1,0 +1,29 @@
+{
+  "name": "SdkGatewayIos",
+  "version": "0.1.0",
+  "summary": "This is a meaningful summary of my pod",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/n.junior/SdkGatewayIos",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "neijrdev": "n.junior@paylivre.com"
+  },
+  "source": {
+    "git": "https://github.com/paylivre/sdk-gateway-ios",
+    "tag": "0.1.0"
+  },
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SdkGatewayIos/Classes/**/*",
+  "resource_bundles": {
+    "Resources": [
+      "SdkGatewayIos/Assets/flower.jpg"
+    ]
+  },
+  "swift_version": "5.0"
+}

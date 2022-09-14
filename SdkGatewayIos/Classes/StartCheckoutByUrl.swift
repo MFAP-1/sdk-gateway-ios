@@ -1,11 +1,11 @@
 import Foundation
 
-public class Logger {
+public class StartCheckoutByUrl {
     
     public init(){}
     
-    public func printLog() {
-        print("Hello world")
+    public func startPayment() {
+        print("StartCheckoutByUrl -> startPayment")
     }
     
     func privateMethod() {

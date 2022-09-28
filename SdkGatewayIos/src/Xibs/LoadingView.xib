@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="SdkGatewayIos">
+            <connections>
+                <outlet property="loadingLabel" destination="4i1-0V-a9R" id="FO8-XZ-Z4p"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwB-ge-ZpF">
+                    <rect key="frame" x="-4.6666666666666572" y="0.0" width="399.33333333333326" height="844"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yfj-cE-hGu" userLabel="CardView">
+                            <rect key="frame" x="79.666666666666686" y="302" width="240" height="240"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verificando dados..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i1-0V-a9R">
+                                    <rect key="frame" x="26" y="119" width="188" height="27"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KWY-Ib-ZXG">
+                                    <rect key="frame" x="110" y="73" width="20" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="tintColor" red="0.0" green="0.36862745099999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="240" id="0iA-Xe-CSP"/>
+                                <constraint firstAttribute="width" constant="240" id="RzF-os-Wgc"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstItem="Yfj-cE-hGu" firstAttribute="centerY" secondItem="NwB-ge-ZpF" secondAttribute="centerY" id="EHd-7e-0xW"/>
+                        <constraint firstItem="Yfj-cE-hGu" firstAttribute="centerX" secondItem="NwB-ge-ZpF" secondAttribute="centerX" id="Jq9-9k-H0y"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="NwB-ge-ZpF" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="1.10616" id="0SN-OH-F0P"/>
+                <constraint firstItem="NwB-ge-ZpF" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="1.02308" id="fd7-RK-MwC"/>
+                <constraint firstItem="NwB-ge-ZpF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jbX-Nm-cnX"/>
+                <constraint firstItem="NwB-ge-ZpF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="v0J-X1-tXz"/>
+            </constraints>
+            <point key="canvasLocation" x="-3.0769230769230766" y="-11.374407582938389"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

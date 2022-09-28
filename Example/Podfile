@@ -1,11 +1,11 @@
-use_frameworks!
+use_frameworks! :linkage => :static
+
+platform :ios, '10.0'
 
 target 'SdkGatewayIos_Example' do
   pod 'SdkGatewayIos', :path => '../'
 
   target 'SdkGatewayIos_Tests' do
     inherit! :search_paths
-
-    
   end
 end

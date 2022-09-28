@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SdkGatewayIos'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'This is a meaningful summary of my pod'
 
 # This description is used to generate tags and improve search results.
@@ -29,12 +29,25 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.swift_version = '5.0'
   s.ios.deployment_target = '10.0'
+  s.default_subspec = 'Default'
+  s.static_framework = true
 
-  s.source_files = 'SdkGatewayIos/Classes/**/*'
+  # s.source_files = 'SdkGatewayIos/src/**/*'
+  # s.resources = ['SdkGatewayIos/src/**/*.xib']
   
-   s.resource_bundles = {
-     'Resources' => ['SdkGatewayIos/Assets/flower.jpg']
-   }
+  #  s.resource_bundles = {
+  #    'Resources' => ['SdkGatewayIos/src/**/*.xib']
+  #  }
+
+   s.subspec 'Default' do |default|
+    default.source_files = ['SdkGatewayIos/src/**/*.swift']
+    default.resources = ['SdkGatewayIos/src/**/*.{storyboard,xib}']
+    default.resource_bundles = {
+      'Resources' => [
+        'SdkGatewayIos/src/**/*.{storyboard,xib}',
+      ]
+    }
+  end
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

@@ -1,6 +1,6 @@
 {
   "name": "SdkGatewayIos",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "summary": "This is a meaningful summary of my pod",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/n.junior/SdkGatewayIos",
@@ -13,17 +13,29 @@
   },
   "source": {
     "git": "https://github.com/paylivre/sdk-gateway-ios",
-    "tag": "0.1.0"
+    "tag": "0.0.1"
   },
   "swift_versions": "5.0",
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
-  "source_files": "SdkGatewayIos/Classes/**/*",
-  "resource_bundles": {
-    "Resources": [
-      "SdkGatewayIos/Assets/flower.jpg"
-    ]
-  },
+  "default_subspecs": "Default",
+  "static_framework": true,
+  "subspecs": [
+    {
+      "name": "Default",
+      "source_files": [
+        "SdkGatewayIos/src/**/*.swift"
+      ],
+      "resources": [
+        "SdkGatewayIos/src/**/*.{storyboard,xib}"
+      ],
+      "resource_bundles": {
+        "Resources": [
+          "SdkGatewayIos/src/**/*.{storyboard,xib}"
+        ]
+      }
+    }
+  ],
   "swift_version": "5.0"
 }

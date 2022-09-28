@@ -1,5 +1,4 @@
 import XCTest
-import SdkGatewayIos
 
 class Tests: XCTestCase {
     

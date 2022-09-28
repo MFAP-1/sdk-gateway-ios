@@ -3,16 +3,28 @@ import SdkGatewayIos
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var btnStartCheckoutByParams: UIButton!
+    @IBOutlet weak var btnStartCheckoutByUrl: UIButton!
+    
+    
+    @IBAction func clickBtnStartCheckoutByParams(_ sender: Any) {
+        let startCheckout = StartCheckoutByParams()
+        if let myNavigationController = navigationController {
+            startCheckout.startPayment(navigationController: myNavigationController )
+        }
+    }
+    
+    @IBAction func clickBtnStartCheckoutByUrl(_ sender: Any) {
+        let startCheckout = StartCheckoutByUrl()
+        if let myNavigationController = navigationController {
+            startCheckout.startPayment(navigationController: myNavigationController )
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let startCheckout = StartCheckoutByUrl()
-        startCheckout.startPayment()
+//        view.backgroundColor = .systemGreen
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
 }
 

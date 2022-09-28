@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainSDK View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="mainSDK" id="Y6W-OH-hqX" customClass="MainSDKViewController" customModule="Resources" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ8-Et-OsV">
+                                <rect key="frame" x="135" y="399.66666666666669" width="120" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="6w3-Cp-pKL"/>
+                                    <constraint firstAttribute="height" constant="45" id="MH4-0s-o8C"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Fechar"/>
+                                <connections>
+                                    <action selector="CloseSDK:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9gi-ZA-cFc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartCheckout: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAA-LT-zmS">
+                                <rect key="frame" x="20" y="127" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TJ8-Et-OsV" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2up-Ra-LXo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aAA-LT-zmS" secondAttribute="trailing" constant="20" id="Mfd-o9-Wat"/>
+                            <constraint firstItem="aAA-LT-zmS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="Xhu-AE-2s5"/>
+                            <constraint firstItem="TJ8-Et-OsV" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="uOn-ZN-vg3"/>
+                            <constraint firstItem="aAA-LT-zmS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="wVx-hL-Gmd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonCloseSDK" destination="TJ8-Et-OsV" id="2Ob-v0-8hs"/>
+                        <outlet property="labelTypeStartCheckout" destination="aAA-LT-zmS" id="6RI-82-KlY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,5 +1,7 @@
 PODS:
-  - SdkGatewayIos (0.1.0)
+  - SdkGatewayIos (0.0.1):
+    - SdkGatewayIos/Default (= 0.0.1)
+  - SdkGatewayIos/Default (0.0.1)
 
 DEPENDENCIES:
   - SdkGatewayIos (from `../`)
@@ -9,8 +11,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SdkGatewayIos: 7648ef482b1443824a5d747c97fc09a9e63dae27
+  SdkGatewayIos: f2144a2e546de12d17c509d4d834a8b1585ea42b
 
-PODFILE CHECKSUM: d480e48212003ce250081e8f2d3a1c32df024aec
+PODFILE CHECKSUM: 24491846c3bc346726fbbea32c30baed43a08511
 
 COCOAPODS: 1.11.3

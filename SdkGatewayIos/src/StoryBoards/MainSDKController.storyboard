@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,12 +26,32 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Fechar"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stbLocKey" value="close"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="CloseSDK:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9gi-ZA-cFc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wah-6e-qen">
+                                <rect key="frame" x="0.0" y="67" width="120" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="ASL-GH-OKK"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="6" maxY="0.0"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Voltar" imagePadding="10" titleAlignment="trailing">
+                                    <imageReference key="image" image="chevron.left" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="stbLocKey" value="back"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="CloseSDK:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2zV-2x-S6y"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StartCheckout: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAA-LT-zmS">
-                                <rect key="frame" x="20" y="127" width="350" height="21"/>
+                                <rect key="frame" x="20" y="112" width="350" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,8 +61,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TJ8-Et-OsV" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="2up-Ra-LXo"/>
+                            <constraint firstItem="wah-6e-qen" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Kn5-Qq-mNS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aAA-LT-zmS" secondAttribute="trailing" constant="20" id="Mfd-o9-Wat"/>
-                            <constraint firstItem="aAA-LT-zmS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="80" id="Xhu-AE-2s5"/>
+                            <constraint firstItem="wah-6e-qen" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="QJp-HW-c0f"/>
+                            <constraint firstItem="aAA-LT-zmS" firstAttribute="top" secondItem="wah-6e-qen" secondAttribute="bottom" constant="10" id="Re0-74-aAZ"/>
                             <constraint firstItem="TJ8-Et-OsV" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="uOn-ZN-vg3"/>
                             <constraint firstItem="aAA-LT-zmS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="wVx-hL-Gmd"/>
                         </constraints>
@@ -57,6 +80,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.left" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

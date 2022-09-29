@@ -41,7 +41,12 @@ TODO: Add long description of the pod here.
 
    s.subspec 'Default' do |default|
     default.source_files = ['SdkGatewayIos/src/**/*.swift']
-    default.resources = ['SdkGatewayIos/src/**/*.{storyboard,xib}']
+    default.resources = [
+      'SdkGatewayIos/src/**/*.{storyboard,xib}',
+      'SdkGatewayIos/src/**/**/*.{storyboard,xib}',
+      'SdkGatewayIos/src/**/*.{lproj,strings,stringsdict}',
+      'SdkGatewayIos/src/**/**/*.{lproj,strings,stringsdict}'
+    ]
     default.resource_bundles = {
       'Resources' => [
         'SdkGatewayIos/src/**/*.{storyboard,xib}',

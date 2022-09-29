@@ -9,7 +9,7 @@ public class StartCheckoutByUrl : StartCheckoutSDK {
     public func startPayment(navigationController: UINavigationController) {
         print("StartCheckoutByUrl -> startPayment")
 
-        super.typeStartCheckoout = TypeStartCheckout.byUrl
+        super.typeStartCheckout = TypeStartCheckout.byUrl
 
 //        super._startPaymentInScreen(navigationController: navigationController) //Screen
         super.startPaymentInModal(navigationController: navigationController) //PopUp

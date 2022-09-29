@@ -273,12 +273,23 @@
 				"${PODS_ROOT}/Target Support Files/Pods-SdkGatewayIos_Example/Pods-SdkGatewayIos_Example-resources.sh",
 				"${BUILT_PRODUCTS_DIR}/SdkGatewayIos/SdkGatewayIos.framework/MainSDKController.storyboardc",
 				"${BUILT_PRODUCTS_DIR}/SdkGatewayIos/SdkGatewayIos.framework/LoadingView.nib",
+				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/Base.Iproj/Localizable.strings",
+				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/en.lproj/Localizable.strings",
+				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/es.lproj/Localizable.strings",
+				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/pt-BR.lproj/Localizable.strings",
+				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/en.lproj",
+				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/es.lproj",
+				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/pt-BR.lproj",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SdkGatewayIos/Resources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MainSDKController.storyboardc",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LoadingView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Localizable.strings",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/es.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pt-BR.lproj",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

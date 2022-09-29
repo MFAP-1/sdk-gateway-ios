@@ -28,7 +28,10 @@
         "SdkGatewayIos/src/**/*.swift"
       ],
       "resources": [
-        "SdkGatewayIos/src/**/*.{storyboard,xib}"
+        "SdkGatewayIos/src/**/*.{storyboard,xib}",
+        "SdkGatewayIos/src/**/**/*.{storyboard,xib}",
+        "SdkGatewayIos/src/**/*.{lproj,strings,stringsdict}",
+        "SdkGatewayIos/src/**/**/*.{lproj,strings,stringsdict}"
       ],
       "resource_bundles": {
         "Resources": [

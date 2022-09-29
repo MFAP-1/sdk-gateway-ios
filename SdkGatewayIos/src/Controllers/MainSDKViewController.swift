@@ -7,12 +7,28 @@ enum TypeStartCheckout {
 
 class MainSDKViewController: UIViewController {
     var typeStartCheckoout : TypeStartCheckout? = nil
+    var loadingView : LoadingView!
     
     @IBOutlet weak var buttonCloseSDK: UIButton!
     @IBOutlet weak var labelTypeStartCheckout: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.loadLoadingView()
+        
+        if let myNavigationController = navigationController {
+            myNavigationController.navigationBar.isHidden = true
+        }
+        
+        //fake timer loading
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.hideLoadingView()
+        }
+    
+        
+        
         switch typeStartCheckoout {
             case .byUrl:
                 labelTypeStartCheckout.text = "StartCheckoutByUrl"
@@ -26,10 +42,14 @@ class MainSDKViewController: UIViewController {
     
     //Function to test load customView
     func loadLoadingView(){
-        let loadingView = LoadingView()
-        loadingView.loadingLabel.text = "Carregando transação"
+        loadingView = LoadingView()
+        loadingView.loadingLabel.text = "checking_data".localized
         self.view.addSubview(loadingView)
         loadingView.frame = self.view.bounds
+    }
+    
+    func hideLoadingView(){
+        loadingView?.removeFromSuperview()
     }
 
     

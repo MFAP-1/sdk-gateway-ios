@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="SdkGatewayIos">
             <connections>
+                <outlet property="cardView" destination="Yfj-cE-hGu" id="aqA-DO-byp"/>
                 <outlet property="loadingLabel" destination="4i1-0V-a9R" id="FO8-XZ-Z4p"/>
             </connections>
         </placeholder>
@@ -23,29 +24,45 @@
                     <rect key="frame" x="-4.6666666666666572" y="0.0" width="399.33333333333326" height="844"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yfj-cE-hGu" userLabel="CardView">
-                            <rect key="frame" x="79.666666666666686" y="302" width="240" height="240"/>
+                            <rect key="frame" x="79.666666666666686" y="332" width="240" height="180"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Verificando dados..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i1-0V-a9R">
-                                    <rect key="frame" x="26" y="119" width="188" height="27"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="KWY-Ib-ZXG">
+                                    <rect key="frame" x="110" y="60" width="20" height="20"/>
+                                    <color key="tintColor" red="0.0" green="0.36862745099999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="Wrh-IV-l65"/>
+                                        <constraint firstAttribute="width" constant="20" id="nOp-9d-G6M"/>
+                                    </constraints>
+                                    <color key="color" systemColor="linkColor"/>
+                                </activityIndicatorView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verificando dados..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4i1-0V-a9R">
+                                    <rect key="frame" x="20" y="100" width="200" height="21.666666666666671"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="stbLocKey" value="checking_data"/>
+                                    </userDefinedRuntimeAttributes>
                                 </label>
-                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KWY-Ib-ZXG">
-                                    <rect key="frame" x="110" y="73" width="20" height="20"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="tintColor" red="0.0" green="0.36862745099999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="240" id="0iA-Xe-CSP"/>
+                                <constraint firstAttribute="height" constant="180" id="0iA-Xe-CSP"/>
+                                <constraint firstItem="4i1-0V-a9R" firstAttribute="top" secondItem="KWY-Ib-ZXG" secondAttribute="bottom" constant="20" id="4QW-bZ-Qgm"/>
+                                <constraint firstItem="KWY-Ib-ZXG" firstAttribute="centerX" secondItem="Yfj-cE-hGu" secondAttribute="centerX" id="JoS-Nu-mnk"/>
                                 <constraint firstAttribute="width" constant="240" id="RzF-os-Wgc"/>
+                                <constraint firstAttribute="trailing" secondItem="4i1-0V-a9R" secondAttribute="trailing" constant="20" id="WRW-FT-8IN"/>
+                                <constraint firstItem="KWY-Ib-ZXG" firstAttribute="centerY" secondItem="Yfj-cE-hGu" secondAttribute="centerY" constant="-20" id="lhI-kj-e9J"/>
+                                <constraint firstItem="4i1-0V-a9R" firstAttribute="leading" secondItem="Yfj-cE-hGu" secondAttribute="leading" constant="20" id="mAc-1A-b1z"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <color key="backgroundColor" systemColor="systemGray3Color"/>
                     <constraints>
                         <constraint firstItem="Yfj-cE-hGu" firstAttribute="centerY" secondItem="NwB-ge-ZpF" secondAttribute="centerY" id="EHd-7e-0xW"/>
                         <constraint firstItem="Yfj-cE-hGu" firstAttribute="centerX" secondItem="NwB-ge-ZpF" secondAttribute="centerX" id="Jq9-9k-H0y"/>
@@ -64,11 +81,14 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

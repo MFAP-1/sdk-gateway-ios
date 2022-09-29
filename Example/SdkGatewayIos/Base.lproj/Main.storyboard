@@ -20,31 +20,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uQR-Sm-smT">
-                                <rect key="frame" x="61" y="119" width="250" height="31"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="StartCheckoutByUrl"/>
-                                <connections>
-                                    <action selector="clickBtnStartCheckoutByUrl:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VaM-Ii-Blz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="2Uj-lz-E3h">
-                                <rect key="frame" x="61" y="61" width="250" height="32"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNa-sY-H19">
+                                <rect key="frame" x="20" y="60" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xkh-aF-sCN"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="StartCheckoutByParams"/>
                                 <connections>
-                                    <action selector="clickBtnStartCheckoutByParams:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="i32-rH-6Aq"/>
+                                    <action selector="clickBtnStartCheckoutByParams:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pRm-MV-RtD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZq-x4-sgB">
+                                <rect key="frame" x="20" y="135" width="335" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Zb4-ZV-3Ml"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="StartCheckoutByUrl"/>
+                                <connections>
+                                    <action selector="clickBtnStartCheckoutByUrl:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="8kw-89-4e9"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xZq-x4-sgB" secondAttribute="trailing" constant="20" id="EAh-d7-Z71"/>
+                            <constraint firstItem="xZq-x4-sgB" firstAttribute="leading" secondItem="XAL-Ga-MT4" secondAttribute="leading" constant="20" id="Hkb-FD-eig"/>
+                            <constraint firstItem="mNa-sY-H19" firstAttribute="top" secondItem="XAL-Ga-MT4" secondAttribute="top" constant="60" id="KZ0-NA-YNs"/>
+                            <constraint firstAttribute="trailing" secondItem="mNa-sY-H19" secondAttribute="trailing" constant="20" id="bVG-Ld-N54"/>
+                            <constraint firstItem="xZq-x4-sgB" firstAttribute="top" secondItem="mNa-sY-H19" secondAttribute="bottom" constant="30" id="ntW-ml-BA0"/>
+                            <constraint firstItem="mNa-sY-H19" firstAttribute="leading" secondItem="XAL-Ga-MT4" secondAttribute="leading" constant="20" id="oa4-6C-OWv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BDP-SM-qvX"/>
                     <connections>
-                        <outlet property="btnStartCheckoutByParams" destination="2Uj-lz-E3h" id="yWU-gK-S0V"/>
-                        <outlet property="btnStartCheckoutByUrl" destination="uQR-Sm-smT" id="Se8-CP-pzS"/>
+                        <outlet property="btnStartCheckoutByParams" destination="mNa-sY-H19" id="Ljx-MM-oRj"/>
+                        <outlet property="btnStartCheckoutByUrl" destination="xZq-x4-sgB" id="n0a-Iy-81Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

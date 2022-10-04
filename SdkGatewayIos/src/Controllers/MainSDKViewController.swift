@@ -6,7 +6,7 @@ enum TypeStartCheckout {
 }
 
 class MainSDKViewController: UIViewController {
-    var typeStartCheckoout : TypeStartCheckout? = nil
+    var typeStartCheckout : TypeStartCheckout? = nil
     var loadingView : LoadingView!
     
     @IBOutlet weak var buttonCloseSDK: UIButton!
@@ -29,7 +29,7 @@ class MainSDKViewController: UIViewController {
     
         
         
-        switch typeStartCheckoout {
+        switch typeStartCheckout {
             case .byUrl:
                 labelTypeStartCheckout.text = "StartCheckoutByUrl"
             case .byParams:

@@ -172,9 +172,9 @@
 			children = (
 				2E6725D6E25CD762A87538A753C64092 /* BundleExtension.swift */,
 				FD9227DE5DB081F0FC9BC13DA1486575 /* Shadow.swift */,
-				3F027338B41FF0654785CC1BD77EDFDB /* StartCheckoutSDK.swift */,
 				B7B3EB499946628FFDBD1C484594A768 /* StartCheckoutByParams.swift */,
 				5B23F9EB19CB285AF5678AF2BE0760E0 /* StartCheckoutByUrl.swift */,
+				3F027338B41FF0654785CC1BD77EDFDB /* StartCheckoutSDK.swift */,
 				F0072A90F4974CB0BA409BFA63CB5144 /* SupportedLanguages.swift */,
 			);
 			name = Classes;
@@ -730,7 +730,8 @@
 				PRODUCT_NAME = Resources;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -781,7 +782,8 @@
 				PRODUCT_NAME = Resources;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;

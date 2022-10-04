@@ -11,6 +11,7 @@ class MainSDKViewController: UIViewController {
     
     @IBOutlet weak var buttonCloseSDK: UIButton!
     @IBOutlet weak var labelTypeStartCheckout: UILabel!
+    private var dispatchLoading: DispatchWorkItem!
     
     
     override func viewDidLoad() {
@@ -22,12 +23,12 @@ class MainSDKViewController: UIViewController {
             myNavigationController.navigationBar.isHidden = true
         }
         
-        //fake timer loading
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.hideLoadingView()
+        dispatchLoading = DispatchWorkItem { [weak self] in
+            self?.hideLoadingView()
         }
-    
         
+        //fake timer loading
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: dispatchLoading!)
         
         switch typeStartCheckout {
             case .byUrl:

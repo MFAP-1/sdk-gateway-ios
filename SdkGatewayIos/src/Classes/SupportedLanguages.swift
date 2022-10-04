@@ -36,3 +36,12 @@ func getLanguageDevice() -> String {
         return SupportedLanguages.getDefault().rawValue
     }
 }
+
+func getLanguageDeviceSupported() -> String {
+    let languageDevice = getLanguagePrefix(getLanguageDevice())
+    if (checkLanguageIsSupported(languageDevice)){
+        return languageDevice
+    } else {
+        return SupportedLanguages.getDefault().rawValue
+    }
+}

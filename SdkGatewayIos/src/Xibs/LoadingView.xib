@@ -11,8 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="SdkGatewayIos">
             <connections>
-                <outlet property="cardView" destination="Yfj-cE-hGu" id="aqA-DO-byp"/>
-                <outlet property="loadingLabel" destination="4i1-0V-a9R" id="FO8-XZ-Z4p"/>
+                <outlet property="cardView" destination="Yfj-cE-hGu" id="ZFg-Yi-IUh"/>
+                <outlet property="loadingLabel" destination="4i1-0V-a9R" id="8fi-FP-RZe"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwB-ge-ZpF">
-                    <rect key="frame" x="-4.6666666666666572" y="0.0" width="399.33333333333326" height="844"/>
+                    <rect key="frame" x="-4.6666666666666572" y="-44.666666666666686" width="399.33333333333326" height="933.33333333333348"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yfj-cE-hGu" userLabel="CardView">
-                            <rect key="frame" x="79.666666666666686" y="332" width="240" height="180"/>
+                            <rect key="frame" x="79.666666666666686" y="376.66666666666669" width="240" height="180.00000000000006"/>
                             <subviews>
                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="KWY-Ib-ZXG">
                                     <rect key="frame" x="110" y="60" width="20" height="20"/>

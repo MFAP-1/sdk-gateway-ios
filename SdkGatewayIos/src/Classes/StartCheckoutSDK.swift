@@ -10,9 +10,10 @@ public class StartCheckoutSDK {
         if (checkLanguageIsSupported(language)){
             self.languageToSet = getLanguagePrefix(language)
         } else {
-            self.languageToSet = getLanguageDevice()
+            self.languageToSet = getLanguageDeviceSupported()
         }
     }
+    
     
     private func _setLanguage(_ language : String){
         print("_setLanguage: language: \(language)")
@@ -26,7 +27,7 @@ public class StartCheckoutSDK {
         if(languageToSet != nil){
             _setLanguage(languageToSet!)
         } else {
-            _setLanguage(SupportedLanguages.getDefault().rawValue)
+            _setLanguage(getLanguageDeviceSupported())
         }
     }
     

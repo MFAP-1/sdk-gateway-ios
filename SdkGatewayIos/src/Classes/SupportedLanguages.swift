@@ -1,17 +1,11 @@
 import Foundation
 
 public enum SupportedLanguages: String, CaseIterable {
-    /**
-     ENGLISH US - This is our default value.
-     */
+    // ENGLISH US - This is our default value.
     case ENGLISH = "en"
-    /**
-     PORTUGUESE Brazil
-     */
+    // PORTUGUESE Brazil
     case PORTUGUESE =  "pt"
-    /**
-     SPANISH  Spain
-     */
+    // SPANISH  Spain
     case SPANISH = "es"
     
     static func getDefault() -> SupportedLanguages {
@@ -20,7 +14,7 @@ public enum SupportedLanguages: String, CaseIterable {
 }
 
 func getLanguagePrefix(_ language : String) -> String {
-    return String(language.prefix(2)).lowercased()
+    return language.trimmingCharacters(in:.whitespacesAndNewlines).prefix(2).lowercased()
 }
 
 func checkLanguageIsSupported(_ language : String) -> Bool {

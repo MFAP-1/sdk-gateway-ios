@@ -61,6 +61,16 @@
                ReferencedContainer = "container:SdkGatewayIos.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ABB456AF91A658F37BCF3EEB2B451FEA"
+               BuildableName = "SdkGatewayIos-Unit-SdkGatewayIosTests.xctest"
+               BlueprintName = "SdkGatewayIos-Unit-SdkGatewayIosTests"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

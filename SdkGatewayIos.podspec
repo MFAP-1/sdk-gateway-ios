@@ -29,7 +29,7 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   s.swift_version = '5.0'
   s.ios.deployment_target = '10.0'
-  s.default_subspec = 'Default'
+  s.default_subspec = 'src'
   s.static_framework = true
 
   # s.source_files = 'SdkGatewayIos/src/**/*'
@@ -39,13 +39,14 @@ TODO: Add long description of the pod here.
   #    'Resources' => ['SdkGatewayIos/src/**/*.xib']
   #  }
 
-   s.subspec 'Default' do |default|
-    default.source_files = ['SdkGatewayIos/src/**/*.swift']
+   s.subspec 'src' do |default|
+    default.source_files = ['SdkGatewayIos/src/**/*.swift', 'SdkGatewayIos/src/**/**/*.swift']
     default.resources = [
       'SdkGatewayIos/src/**/*.{storyboard,xib}',
       'SdkGatewayIos/src/**/**/*.{storyboard,xib}',
       'SdkGatewayIos/src/**/*.{lproj,strings,stringsdict}',
-      'SdkGatewayIos/src/**/**/*.{lproj,strings,stringsdict}'
+      'SdkGatewayIos/src/**/**/*.{lproj,strings,stringsdict}',
+      'SdkGatewayIos/src/**/*.{jpg}'
     ]
     default.resource_bundles = {
       'Resources' => [
@@ -54,6 +55,12 @@ TODO: Add long description of the pod here.
     }
   end
 
+  s.test_spec 'SdkGatewayIosTests' do |test_spec|
+    test_spec.requires_app_host = false
+    test_spec.source_files = 'SdkGatewayIos/Tests/*'
+    test_spec.frameworks = 'XCTest'
+  end
+  
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'

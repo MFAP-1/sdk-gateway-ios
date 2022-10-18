@@ -23,7 +23,7 @@ public class StartCheckoutSDK {
         Bundle.setLanguage(language)
     }
     
-    private func setCurrentLanguageSDK(){
+    private func _setCurrentLanguageSDK(){
         if(languageToSet != nil){
             _setLanguage(languageToSet!)
         } else {
@@ -32,20 +32,20 @@ public class StartCheckoutSDK {
     }
     
     func startPaymentInModal(navigationController: UINavigationController){
-        self.setCurrentLanguageSDK()
-        let mainSDKViewController = self.getMainSDKViewController()
+        self._setCurrentLanguageSDK()
+        let mainSDKViewController = self._getMainSDKViewController()
         mainSDKViewController.typeStartCheckout = self.typeStartCheckout
         navigationController.present(mainSDKViewController, animated: true) //PopUp
     }
     
     func startPaymentInScreen(navigationController: UINavigationController){
-        self.setCurrentLanguageSDK()
-        let mainSDKViewController = self.getMainSDKViewController()
+        self._setCurrentLanguageSDK()
+        let mainSDKViewController = self._getMainSDKViewController()
         mainSDKViewController.typeStartCheckout = self.typeStartCheckout
         navigationController.pushViewController(mainSDKViewController, animated: true)
     }
     
-    func getMainSDKViewController() -> MainSDKViewController {
+    private func _getMainSDKViewController() -> MainSDKViewController {
         let storyBoard : UIStoryboard = UIStoryboard(name: "MainSDKController", bundle:nil)
         let mainSDKViewController = storyBoard.instantiateViewController(withIdentifier: "mainSDK") as! MainSDKViewController
         return mainSDKViewController

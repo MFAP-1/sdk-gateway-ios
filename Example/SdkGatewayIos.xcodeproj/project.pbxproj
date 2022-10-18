@@ -104,10 +104,10 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				8A06057028D15C5F009E3FB0 /* LaunchScreen.storyboard */,
-				607FACD31AFB9204008FA782 /* Supporting Files */,
 				8A36B1A928E5FD9C00E481E6 /* Main.storyboard */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for SdkGatewayIos";
 			path = SdkGatewayIos;
@@ -293,8 +293,8 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SdkGatewayIos_Example/Pods-SdkGatewayIos_Example-resources.sh",
-				"${BUILT_PRODUCTS_DIR}/SdkGatewayIos/SdkGatewayIos.framework/MainSDKController.storyboardc",
 				"${BUILT_PRODUCTS_DIR}/SdkGatewayIos/SdkGatewayIos.framework/LoadingView.nib",
+				"${BUILT_PRODUCTS_DIR}/SdkGatewayIos/SdkGatewayIos.framework/MainSDKController.storyboardc",
 				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/Base.Iproj/Localizable.strings",
 				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/en.lproj/Localizable.strings",
 				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/es.lproj/Localizable.strings",
@@ -302,16 +302,18 @@
 				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/en.lproj",
 				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/es.lproj",
 				"${PODS_ROOT}/../../SdkGatewayIos/src/Translations/pt-BR.lproj",
+				"${PODS_ROOT}/../../SdkGatewayIos/src/Assets/flower.jpg",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SdkGatewayIos/Resources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MainSDKController.storyboardc",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LoadingView.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MainSDKController.storyboardc",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Localizable.strings",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/en.lproj",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/es.lproj",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/pt-BR.lproj",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/flower.jpg",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

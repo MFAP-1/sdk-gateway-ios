@@ -24,6 +24,5 @@ jobs:
         run: xcodebuild test -scheme SdkGatewayIos-Unit-SdkGatewayIosTests -workspace Example/SdkGatewayIos.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.2' -enableCodeCoverage YES build test
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1.2.1
-
-ignore:
-  - "SdkGatewayIos/Tests"
+        ignore:
+          - "SdkGatewayIos/Tests"

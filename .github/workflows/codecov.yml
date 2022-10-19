@@ -1,0 +1,27 @@
+name: SDK iOS CI with tests
+
+on:
+  push:
+    branches:
+      - DV-2538_configurar-ferramenta-code-coverage-no-CI-do-repo_3
+  pull_request:
+    branches:
+      - develop_0.0.1
+      - DV-2538_configurar-ferramenta-code-coverage-no-CI-do-repo_3
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+      - name: Test
+        uses: actions/checkout@v1
+      - name: Run the pod install
+        run: cd Example/ && pod install && cd ../
+      - name: Get list of iOS simulators
+        run: xcrun simctl list --json devices available
+      - name: Get list of available schemes
+        run: cd Example/ && xcodebuild -list && cd ../
+      - name: Build and Test
+        run: xcodebuild test -scheme SdkGatewayIos-Unit-SdkGatewayIosTests -workspace Example/SdkGatewayIos.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.2' -enableCodeCoverage YES build test
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1.2.1

@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/cocoapods/v/SdkGatewayIos.svg?style=flat)](https://cocoapods.org/pods/SdkGatewayIos)
 [![License](https://img.shields.io/cocoapods/l/SdkGatewayIos.svg?style=flat)](https://cocoapods.org/pods/SdkGatewayIos)
 [![Platform](https://img.shields.io/cocoapods/p/SdkGatewayIos.svg?style=flat)](https://cocoapods.org/pods/SdkGatewayIos)
-[![codecov](https://codecov.io/gh/MFAP-1/sdk-gateway-ios/branch/develop_0.0.1/graph/badge.svg?token=K0QL3E04EJ)](https://codecov.io/gh/MFAP-1/sdk-gateway-ios)
+[![codecov](https://codecov.io/gh/MFAP-1/sdk-gateway-ios/branch/DV-2538_configurar-ferramenta-code-coverage-no-CI-do-repo_3/graph/badge.svg?token=K0QL3E04EJ)](https://codecov.io/gh/MFAP-1/sdk-gateway-ios)
 
 ## Example
 

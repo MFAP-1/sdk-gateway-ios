@@ -3,11 +3,13 @@ name: SDK iOS CI with tests
 on:
   push:
     branches:
-      - DV-2538_configurar-ferramenta-code-coverage-no-CI-do-repo_3
+      - "**"
   pull_request:
     branches:
-      - develop_0.0.1
-      - DV-2538_configurar-ferramenta-code-coverage-no-CI-do-repo_3
+      - "**"
+
+ignore:
+  - "SdkGatewayIos/Tests"
 
 jobs:
   build:
